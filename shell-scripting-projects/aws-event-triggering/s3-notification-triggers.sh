@@ -65,6 +65,7 @@ aws lambda create-function \
   --role "arn:aws:iam::$aws_account_id:role/$role_name" \
   --zip-file "fileb://./s3-lambda-function.zip"
 
+sleep 5
 # Add Permissions to S3 Bucket to invoke Lambda
 aws lambda add-permission \
   --function-name "$lambda_func_name" \
